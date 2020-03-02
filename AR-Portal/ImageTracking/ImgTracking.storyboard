@@ -11,7 +11,7 @@
         <!--Status View Controller-->
         <scene sceneID="77w-3P-l9O">
             <objects>
-                <viewController id="pBh-ie-0iV" customClass="StatusViewController" customModule="Tracked_Images" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="pBh-ie-0iV" customClass="StatusViewController" customModule="AR_Portal" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cds-Wr-N04">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="85"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -140,9 +140,16 @@
                                     <segue destination="pBh-ie-0iV" kind="embed" id="5mF-gt-7mG"/>
                                 </connections>
                             </containerView>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search" translatesAutoresizingMaskIntoConstraints="NO" id="fPz-H6-G3R">
+                                <rect key="frame" x="87" y="315" width="240" height="265"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="265" id="Kia-AL-4Dx"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="fPz-H6-G3R" firstAttribute="centerX" secondItem="Lva-d3-Jva" secondAttribute="centerX" id="0cb-cd-rdT"/>
                             <constraint firstItem="jq2-Ao-kvj" firstAttribute="centerX" secondItem="A9A-7O-t6F" secondAttribute="centerX" id="7To-j1-27x"/>
                             <constraint firstItem="Scy-eT-5Em" firstAttribute="leading" secondItem="8KM-H4-jdR" secondAttribute="leading" id="7np-Pa-qSh"/>
                             <constraint firstItem="8KM-H4-jdR" firstAttribute="trailing" secondItem="Scy-eT-5Em" secondAttribute="trailing" id="DI8-Wm-sXM"/>
@@ -152,8 +159,10 @@
                             <constraint firstItem="8KM-H4-jdR" firstAttribute="bottom" secondItem="jq2-Ao-kvj" secondAttribute="bottom" constant="20" id="dnv-gz-RfS"/>
                             <constraint firstItem="Scy-eT-5Em" firstAttribute="top" secondItem="8KM-H4-jdR" secondAttribute="top" id="hKu-zd-AH2"/>
                             <constraint firstItem="Lva-d3-Jva" firstAttribute="centerX" secondItem="A9A-7O-t6F" secondAttribute="centerX" id="jGE-G0-aEW"/>
+                            <constraint firstItem="fPz-H6-G3R" firstAttribute="leading" secondItem="8KM-H4-jdR" secondAttribute="leading" constant="87" id="jGg-Ql-Lr4"/>
                             <constraint firstItem="8KM-H4-jdR" firstAttribute="trailing" secondItem="A9A-7O-t6F" secondAttribute="trailing" id="je3-zm-4ly"/>
                             <constraint firstItem="8KM-H4-jdR" firstAttribute="bottom" secondItem="Lva-d3-Jva" secondAttribute="bottom" constant="60" id="k6l-jz-2Ol"/>
+                            <constraint firstItem="fPz-H6-G3R" firstAttribute="centerY" secondItem="6cO-4D-7jq" secondAttribute="centerY" id="kiE-O4-HGd"/>
                             <constraint firstAttribute="trailing" secondItem="6cO-4D-7jq" secondAttribute="trailing" id="lDd-mU-fZ3"/>
                             <constraint firstAttribute="bottom" secondItem="A9A-7O-t6F" secondAttribute="bottom" id="phi-m2-oBk"/>
                             <constraint firstAttribute="bottom" secondItem="6cO-4D-7jq" secondAttribute="bottom" id="yuQ-bd-CrJ"/>
@@ -163,17 +172,19 @@
                     </view>
                     <connections>
                         <outlet property="blurView" destination="6cO-4D-7jq" id="Lry-zb-iJg"/>
+                        <outlet property="imageViewSearch" destination="fPz-H6-G3R" id="2mH-Vz-4WN"/>
                         <outlet property="magicSwitch" destination="jq2-Ao-kvj" id="C5Q-1Q-MHN"/>
                         <outlet property="sceneView" destination="A9A-7O-t6F" id="AWR-9s-WJh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g8e-aX-kcX" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="100" y="135"/>
+            <point key="canvasLocation" x="100.00000000000001" y="134.59821428571428"/>
         </scene>
     </scenes>
     <resources>
         <image name="restart" width="16" height="16"/>
         <image name="restartPressed" width="16" height="16"/>
+        <image name="search" width="512" height="512"/>
     </resources>
 </document>

@@ -10,7 +10,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AR_Portal" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PortalViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="AR_Portal" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -22,32 +22,24 @@
                             <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f4g-Li-QxH">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </arscnView>
-                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search" translatesAutoresizingMaskIntoConstraints="NO" id="3ll-Yd-5ZS">
-                                <rect key="frame" x="43" y="195" width="288" height="277"/>
-                            </imageView>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="8gd-ES-VbN">
-                                <rect key="frame" x="162.5" y="616" width="51" height="31"/>
-                                <connections>
-                                    <action selector="onSwithBtnChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="4rp-9Q-zLR"/>
-                                </connections>
-                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2F0-Xe-l73">
+                                <rect key="frame" x="0.0" y="594" width="375" height="73"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="f4g-Li-QxH" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="1nQ-nR-tya"/>
                             <constraint firstItem="f4g-Li-QxH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="BFq-ho-SGR"/>
                             <constraint firstAttribute="trailing" secondItem="f4g-Li-QxH" secondAttribute="trailing" id="BYF-bB-0iS"/>
-                            <constraint firstAttribute="trailing" secondItem="3ll-Yd-5ZS" secondAttribute="trailing" constant="44" id="MQL-11-8XJ"/>
-                            <constraint firstItem="3ll-Yd-5ZS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="43" id="drf-kO-x9y"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="8gd-ES-VbN" secondAttribute="bottom" constant="20" id="eqk-Il-u4E"/>
-                            <constraint firstItem="8gd-ES-VbN" firstAttribute="centerX" secondItem="3ll-Yd-5ZS" secondAttribute="centerX" id="nCS-6Q-Qup"/>
-                            <constraint firstItem="3ll-Yd-5ZS" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="195" id="tf3-ti-g94"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="3ll-Yd-5ZS" secondAttribute="bottom" constant="195" id="uEx-Ny-uGQ"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="f4g-Li-QxH" secondAttribute="bottom" id="zBn-CJ-UrU"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="imageViewSearch" destination="3ll-Yd-5ZS" id="hty-0J-IJt"/>
+                        <outlet property="planeSearchLabel" destination="2F0-Xe-l73" id="bcs-GV-eoV"/>
                         <outlet property="sceneView" destination="f4g-Li-QxH" id="Amf-O2-T3Z"/>
                     </connections>
                 </viewController>
@@ -56,7 +48,4 @@
             <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="search" width="512" height="512"/>
-    </resources>
 </document>

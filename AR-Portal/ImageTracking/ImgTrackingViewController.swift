@@ -12,7 +12,8 @@ import ARKit
 
 @available(iOS 12.0, *)
 class ImgTrackingViewController: UIViewController, ARSCNViewDelegate {
-
+    
+    @IBOutlet var imageViewSearch: UIImageView!
     @IBOutlet var sceneView: ARSCNView!
     @IBOutlet weak var magicSwitch: UISwitch!
     @IBOutlet weak var blurView: UIVisualEffectView!
@@ -20,69 +21,69 @@ class ImgTrackingViewController: UIViewController, ARSCNViewDelegate {
     // Create video player
     let isaVideoPlayer: AVPlayer = {
         //load Isa video from bundle
-//        guard let url = Bundle.main.url(forResource: "isa video", withExtension: "mp4", subdirectory: "art.scnassets") else {
-//            print("Could not find video file")
-//            return AVPlayer()
-//        }
+        //        guard let url = Bundle.main.url(forResource: "isa video", withExtension: "mp4", subdirectory: "art.scnassets") else {
+        //            print("Could not find video file")
+        //            return AVPlayer()
+        //        }
         
         guard let path = Bundle.main.path(forResource: "isa video", ofType:"mp4") else {
-
-                      print("Could not find video file")
-                      return AVPlayer()
-                  }
+            
+            print("Could not find video file")
+            return AVPlayer()
+        }
         
         return AVPlayer(url: URL(fileURLWithPath: path))
         
     }()
     let pragueVideoPlayer: AVPlayer = {
         //load Prague video from bundle
-//        guard let url = Bundle.main.url(forResource: "prague video", withExtension: "mp4", subdirectory: "art.scnassets") else {
-//            print("Could not find video file")
-//            return AVPlayer()
-//        }
-//        return AVPlayer(url: url)
+        //        guard let url = Bundle.main.url(forResource: "prague video", withExtension: "mp4", subdirectory: "art.scnassets") else {
+        //            print("Could not find video file")
+        //            return AVPlayer()
+        //        }
+        //        return AVPlayer(url: url)
         
         
         guard let path = Bundle.main.path(forResource: "prague video", ofType:"mp4") else {
-
-                      print("Could not find video file")
-                      return AVPlayer()
-                  }
+            
+            print("Could not find video file")
+            return AVPlayer()
+        }
         
         return AVPlayer(url: URL(fileURLWithPath: path))
         
     }()
     let fightClubVideoPlayer: AVPlayer = {
         //load Prague video from bundle
-//        guard let url = Bundle.main.url(forResource: "fight club video", withExtension: "mov", subdirectory: "art.scnassets") else {
-//            print("Could not find video file")
-//            return AVPlayer()
-//        }
-//        return AVPlayer(url: url)
+        //        guard let url = Bundle.main.url(forResource: "fight club video", withExtension: "mov", subdirectory: "art.scnassets") else {
+        //            print("Could not find video file")
+        //            return AVPlayer()
+        //        }
+        //        return AVPlayer(url: url)
         
         guard let path = Bundle.main.path(forResource: "fight club video", ofType:"mov") else {
-
-                      print("Could not find video file")
-                      return AVPlayer()
-                  }
+            
+            print("Could not find video file")
+            return AVPlayer()
+        }
         
         return AVPlayer(url: URL(fileURLWithPath: path))
         
     }()
     let homerVideoPlayer: AVPlayer = {
         //load Prague video from bundle
-//        guard let url = Bundle.main.url(forResource: "homer video", withExtension: "mov", subdirectory: "art.scnassets") else {
-//            print("Could not find video file")
-//            return AVPlayer()
-//        }
-//        return AVPlayer(url: url)
+        //        guard let url = Bundle.main.url(forResource: "homer video", withExtension: "mov", subdirectory: "art.scnassets") else {
+        //            print("Could not find video file")
+        //            return AVPlayer()
+        //        }
+        //        return AVPlayer(url: url)
         
         
         guard let path = Bundle.main.path(forResource: "homer video", ofType:"mov") else {
-
-                      print("Could not find video file")
-                      return AVPlayer()
-                  }
+            
+            print("Could not find video file")
+            return AVPlayer()
+        }
         
         return AVPlayer(url: URL(fileURLWithPath: path))
     }()
@@ -138,7 +139,7 @@ class ImgTrackingViewController: UIViewController, ARSCNViewDelegate {
     /// Prevents restarting the session while a restart is in progress.
     var isRestartAvailable = true
     
-    @IBAction func switchOnMagic(_ sender: Any) {
+    @IBAction func switchOnMagic(_ sender: UISwitch) {
         let configuration = ARImageTrackingConfiguration()
         
         guard let trackingImages = ARReferenceImage.referenceImages(inGroupNamed: "AR Resources", bundle: nil) else {
@@ -148,8 +149,19 @@ class ImgTrackingViewController: UIViewController, ARSCNViewDelegate {
         
         // Setup Configuration
         configuration.trackingImages = trackingImages
-        configuration.maximumNumberOfTrackedImages = 4
-        session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
+        //configuration.maximumNumberOfTrackedImages = 4
+        configuration.maximumNumberOfTrackedImages = 1;
+        //        session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
+        
+        
+        if sender.isOn {
+            self.imageViewSearch.isHidden = false
+            session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
+        }else{
+            self.imageViewSearch.isHidden = true;
+            session.pause()
+            
+        }
     }
     
     
@@ -171,31 +183,34 @@ class ImgTrackingViewController: UIViewController, ARSCNViewDelegate {
             
             // Create a plane
             let plane = SCNPlane(width: imageAnchor.referenceImage.physicalSize.width, height: imageAnchor.referenceImage.physicalSize.height)
-//            if imageAnchor.referenceImage.name == "prague image" {
+            //            if imageAnchor.referenceImage.name == "prague image" {
             if imageAnchor.referenceImage.name == "hegazy1"{
                 debugPrint("hegzo")
                 // Set AVPlayer as the plane's texture and play
-                plane.firstMaterial?.diffuse.contents = self.pragueVideoPlayer
-                self.pragueVideoPlayer.play()
-                self.pragueVideoPlayer.volume = 0.4
+                //plane.firstMaterial?.diffuse.contents = self.pragueVideoPlayer
+                //self.pragueVideoPlayer.play()
+                //self.pragueVideoPlayer.volume = 0.4
                 
-                
+                //go to portal
+                goToPortal()
                 
                 
             }
-            else if imageAnchor.referenceImage.name == "fight club image" {
-//               else  if imageAnchor.referenceImage.name == "hegazy1"{
-
-                plane.firstMaterial?.diffuse.contents = self.fightClubVideoPlayer
-                self.fightClubVideoPlayer.play()
-            } else if imageAnchor.referenceImage.name == "homer image" {
-                plane.firstMaterial?.diffuse.contents = self.homerVideoPlayer
-                self.homerVideoPlayer.play()
-            } else {
-                plane.firstMaterial?.diffuse.contents = self.isaVideoPlayer
-                self.isaVideoPlayer.play()
-                self.isaVideoPlayer.isMuted = true
-            }
+            
+            
+            //            else if imageAnchor.referenceImage.name == "fight club image" {
+            ////               else  if imageAnchor.referenceImage.name == "hegazy1"{
+            //
+            //                plane.firstMaterial?.diffuse.contents = self.fightClubVideoPlayer
+            //                self.fightClubVideoPlayer.play()
+            //            } else if imageAnchor.referenceImage.name == "homer image" {
+            //                plane.firstMaterial?.diffuse.contents = self.homerVideoPlayer
+            //                self.homerVideoPlayer.play()
+            //            } else {
+            //                plane.firstMaterial?.diffuse.contents = self.isaVideoPlayer
+            //                self.isaVideoPlayer.play()
+            //                self.isaVideoPlayer.isMuted = true
+            //            }
             
             let planeNode = SCNNode(geometry: plane)
             
@@ -208,4 +223,22 @@ class ImgTrackingViewController: UIViewController, ARSCNViewDelegate {
         
         return node
     }
+    
+    
+    func goToPortal(){
+        
+        //self.pragueVideoPlayer.pause()
+        //self.session.pause()
+        
+        ///instantiate-and-present-a-viewcontroller-in-swift
+        DispatchQueue.main.async {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let controller = storyboard.instantiateViewController(withIdentifier: "PortalViewController")
+            self.present(controller, animated: true, completion: nil)
+        }
+        
+        
+        
+    }
+    
 }
