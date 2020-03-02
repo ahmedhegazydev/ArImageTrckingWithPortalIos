@@ -10,6 +10,7 @@ import UIKit
 import SceneKit
 import ARKit
 
+@available(iOS 13.0, *)
 class ViewController: UIViewController, ARSCNViewDelegate {
     @IBOutlet weak var planeSearchLabel: UILabel!
     @IBOutlet weak var sceneView: ARSCNView!
@@ -28,6 +29,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
                 self.planeSearchLabel.text = "Move around to allow the app the find a plane..."
             } else {
                 self.planeSearchLabel.text = "Tap on a plane surface to place board..."
+                self.didTap(UITapGestureRecognizer())
+                
             }
             
         }
@@ -82,6 +85,12 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     }
     
     private func anyPlaneFrom(location:CGPoint) -> (SCNNode, SCNVector3)? {
+        
+        ////didTap (213.0, 308.0)
+        let location: CGPoint = CGPoint(x: CGFloat(213.0), y: CGFloat(308.0))
+        
+        
+        
         let results = sceneView.hitTest(location,
                                         types: ARHitTestResult.ResultType.existingPlaneUsingExtent)
         
@@ -112,41 +121,56 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         let sideLength = Nodes.WALL_LENGTH * 3
         let halfSideLength = sideLength * 0.5
         
+        
+        ////------
+        ////front  wall
         let endWallSegmentNode = Nodes.wallSegmentNode(length: sideLength,
                                                        maskXUpperSide: true)
         endWallSegmentNode.eulerAngles = SCNVector3(0, 90.0.degreesToRadians, 0)
         endWallSegmentNode.position = SCNVector3(0, Float(Nodes.WALL_HEIGHT * 0.5), Float(Nodes.WALL_LENGTH) * -1.5)
         wallNode.addChildNode(endWallSegmentNode)
         
-        let sideAWallSegmentNode = Nodes.wallSegmentNode(length: sideLength,
-                                                       maskXUpperSide: true)
+        
+       //// The right wall
+        let sideAWallSegmentNode = Nodes.wallSegmentNode(length: sideLength,maskXUpperSide:true)
         sideAWallSegmentNode.eulerAngles = SCNVector3(0, 180.0.degreesToRadians, 0)
         sideAWallSegmentNode.position = SCNVector3(Float(Nodes.WALL_LENGTH) * -1.5, Float(Nodes.WALL_HEIGHT * 0.5), 0)
         wallNode.addChildNode(sideAWallSegmentNode)
-        
+
+        ////---the let wall
         let sideBWallSegmentNode = Nodes.wallSegmentNode(length: sideLength,
                                                          maskXUpperSide: true)
         sideBWallSegmentNode.position = SCNVector3(Float(Nodes.WALL_LENGTH) * 1.5, Float(Nodes.WALL_HEIGHT * 0.5), 0)
         wallNode.addChildNode(sideBWallSegmentNode)
         
-        let doorSideLength = (sideLength - Nodes.DOOR_WIDTH) * 0.5
         
+        //this making hole in the door
+        let doorSideLength = (sideLength - Nodes.DOOR_WIDTH) * 0.5
+        //let doorSideLength = Nodes.WALL_LENGTH
+        
+        
+        //------
+        //Adding the left section of hole
         let leftDoorSideNode = Nodes.wallSegmentNode(length: doorSideLength,
                                                      maskXUpperSide: true)
         leftDoorSideNode.eulerAngles = SCNVector3(0, 270.0.degreesToRadians, 0)
-        leftDoorSideNode.position = SCNVector3(Float(-halfSideLength + 0.5 * doorSideLength),
-                                               Float(Nodes.WALL_HEIGHT) * Float(0.5),
-                                               Float(Nodes.WALL_LENGTH) * 1.5)
+        leftDoorSideNode.position = SCNVector3(Float(-halfSideLength + 0.5 * doorSideLength),Float(Nodes.WALL_HEIGHT) * Float(0.5),Float(Nodes.WALL_LENGTH) * 1.5)
+//        leftDoorSideNode.position = SCNVector3(Float(-halfSideLength * doorSideLength),Float(Nodes.WALL_HEIGHT) * Float(0.5),Float(Nodes.WALL_LENGTH) * 1.5)
         wallNode.addChildNode(leftDoorSideNode)
         
+        
+        //------
+        //Adding the left section of hole
         let rightDoorSideNode = Nodes.wallSegmentNode(length: doorSideLength,
                                                      maskXUpperSide: true)
         rightDoorSideNode.eulerAngles = SCNVector3(0, 270.0.degreesToRadians, 0)
-        rightDoorSideNode.position = SCNVector3(Float(halfSideLength - 0.5 * doorSideLength),
-                                                Float(Nodes.WALL_HEIGHT) * Float(0.5),
-                                                Float(Nodes.WALL_LENGTH) * 1.5)
+        rightDoorSideNode.position = SCNVector3(Float(halfSideLength - 0.5 * doorSideLength),Float(Nodes.WALL_HEIGHT) * Float(0.5),Float(Nodes.WALL_LENGTH) * 1.5)
+//               rightDoorSideNode.position = SCNVector3(Float(halfSideLength * doorSideLength),Float(Nodes.WALL_HEIGHT) * Float(0.5),Float(Nodes.WALL_LENGTH) * 1.5)
         wallNode.addChildNode(rightDoorSideNode)
         
+        
+        
+        //--------
         let aboveDoorNode = Nodes.wallSegmentNode(length: Nodes.DOOR_WIDTH,
                                                   height: Nodes.WALL_HEIGHT - Nodes.DOOR_HEIGHT)
         aboveDoorNode.eulerAngles = SCNVector3(0, 270.0.degreesToRadians, 0)
@@ -154,6 +178,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
                                             Float(Nodes.WALL_HEIGHT) - Float(Nodes.WALL_HEIGHT - Nodes.DOOR_HEIGHT) * 0.5,
                                             Float(Nodes.WALL_LENGTH) * 1.5)
         wallNode.addChildNode(aboveDoorNode)
+        
+        
         
         let floorNode = Nodes.plane(pieces: 3,
                                     maskYUpperSide: false)
@@ -254,6 +280,27 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         }
         
     }
+    
+    
+    
+    //@available(iOS 12.0, *)
+    @IBAction func btnTrySearchingMarkerAgain(_ sender: UIButton) {
+        
+        
+        self.dismiss(animated: true) {
+            let vcTrackingImage = UIStoryboard(name: "ImgTracking", bundle: nil).instantiateViewController(identifier: "ImgTrackingViewController") as ImgTrackingViewController
+            
+            vcTrackingImage.modalTransitionStyle = .flipHorizontal
+            vcTrackingImage.modalPresentationStyle = .fullScreen
+            self.present(vcTrackingImage, animated: true) {
+                
+            }
+            
+            
+        }
+        
+    }
+    
     
     
 }

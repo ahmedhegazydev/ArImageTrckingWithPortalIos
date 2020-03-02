@@ -103,7 +103,7 @@
         <!--Img Tracking View Controller-->
         <scene sceneID="hed-i3-bn2">
             <objects>
-                <viewController id="HEl-GK-NpA" customClass="ImgTrackingViewController" customModule="AR_Portal" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ImgTrackingViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="HEl-GK-NpA" customClass="ImgTrackingViewController" customModule="AR_Portal" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XPS-RH-TXz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -111,7 +111,7 @@
                             <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" wantsMultisampling="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A9A-7O-t6F" customClass="ARSCNView">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </sceneKitView>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jq2-Ao-kvj">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="jq2-Ao-kvj">
                                 <rect key="frame" x="182.5" y="811" width="51" height="31"/>
                                 <connections>
                                     <action selector="switchOnMagic:" destination="HEl-GK-NpA" eventType="valueChanged" id="Rzd-Ce-2Sq"/>
@@ -141,7 +141,7 @@
                                 </connections>
                             </containerView>
                             <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search" translatesAutoresizingMaskIntoConstraints="NO" id="fPz-H6-G3R">
-                                <rect key="frame" x="87" y="315" width="240" height="265"/>
+                                <rect key="frame" x="87" y="315.5" width="240" height="265"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="265" id="Kia-AL-4Dx"/>
                                 </constraints>

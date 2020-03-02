@@ -108,8 +108,13 @@ class ImgTrackingViewController: UIViewController, ARSCNViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        self.disableViews()
+        
+        
+        
         sceneView.delegate = self
-        sceneView.session.delegate = self as! ARSessionDelegate
+        sceneView.session.delegate = self as ARSessionDelegate
         magicSwitch.setOn(false, animated: false)
         
         // Hook up status view controller callback(s).
@@ -126,6 +131,14 @@ class ImgTrackingViewController: UIViewController, ARSCNViewDelegate {
         
         // Start the AR experience
         resetTracking()
+        
+        
+        disableViews()
+    }
+    
+    func disableViews(){
+        self.imageViewSearch.isHidden = true;
+        self.magicSwitch.isOn = false;
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -232,9 +245,19 @@ class ImgTrackingViewController: UIViewController, ARSCNViewDelegate {
         
         ///instantiate-and-present-a-viewcontroller-in-swift
         DispatchQueue.main.async {
+            
+            self.dismiss(animated: true) {
+                
+            }
+            
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let controller = storyboard.instantiateViewController(withIdentifier: "PortalViewController")
+            controller.modalPresentationStyle = .fullScreen
+            controller.modalTransitionStyle = .flipHorizontal
             self.present(controller, animated: true, completion: nil)
+            
+            
+            
         }
         
         

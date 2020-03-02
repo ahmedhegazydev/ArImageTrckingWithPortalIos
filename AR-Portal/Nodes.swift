@@ -10,12 +10,23 @@ import Foundation
 import SceneKit
 
 final class Nodes {
-    static let WALL_WIDTH:CGFloat = 0.02
-    static let WALL_HEIGHT:CGFloat = 2.2
+    
+    
+//    static let WALL_WIDTH:CGFloat = 0.02
+    static let WALL_WIDTH:CGFloat = 1
+    
+//    static let WALL_HEIGHT:CGFloat = 2.2
+    static let WALL_HEIGHT:CGFloat = 4
+
+    
     static let WALL_LENGTH:CGFloat = 1
     
-    static let DOOR_WIDTH:CGFloat = 0.6
+    
+//    static let DOOR_WIDTH:CGFloat = 0.6
+    static let DOOR_WIDTH: CGFloat = 1;
+    
     static let DOOR_HEIGHT:CGFloat = 1.5
+    
     
     class func plane(pieces:Int, maskYUpperSide:Bool = true) -> SCNNode {
         let maskSegment = SCNBox(width: Nodes.WALL_LENGTH * CGFloat(pieces),

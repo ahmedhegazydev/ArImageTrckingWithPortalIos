@@ -10,7 +10,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="PortalViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="AR_Portal" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PortalViewController" modalTransitionStyle="flipHorizontal" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="AR_Portal" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -22,19 +22,37 @@
                             <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f4g-Li-QxH">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </arscnView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2F0-Xe-l73">
-                                <rect key="frame" x="0.0" y="594" width="375" height="73"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="59M-sC-mne">
+                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2F0-Xe-l73">
+                                        <rect key="frame" x="0.0" y="0.0" width="187.5" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="LmE-gT-kab"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PNp-O5-4Cm">
+                                        <rect key="frame" x="187.5" y="0.0" width="187.5" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <state key="normal" title="Try Again"/>
+                                        <connections>
+                                            <action selector="btnTrySearchingMarkerAgain:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GGP-nf-Bq3"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="f4g-Li-QxH" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="1nQ-nR-tya"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="59M-sC-mne" secondAttribute="bottom" id="93E-kV-r4u"/>
                             <constraint firstItem="f4g-Li-QxH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="BFq-ho-SGR"/>
                             <constraint firstAttribute="trailing" secondItem="f4g-Li-QxH" secondAttribute="trailing" id="BYF-bB-0iS"/>
+                            <constraint firstItem="59M-sC-mne" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Zwq-dd-C69"/>
+                            <constraint firstAttribute="trailing" secondItem="59M-sC-mne" secondAttribute="trailing" id="i1T-Y2-e4o"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="f4g-Li-QxH" secondAttribute="bottom" id="zBn-CJ-UrU"/>
                         </constraints>
                     </view>
