@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		002BECAA2430D51B0032BCB7 /* search.wav in Resources */ = {isa = PBXBuildFile; fileRef = 002BECA92430D51B0032BCB7 /* search.wav */; };
 		06391F401F0A2FA2000CBEAA /* ReplayKitRecording.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06391F3F1F0A2FA2000CBEAA /* ReplayKitRecording.swift */; };
+		67BB6D948A13D699680B343E /* libPods-AR-Portal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 08FA007EAE7FBDD767547840 /* libPods-AR-Portal.a */; };
 		709C7D191F09498C002B9025 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709C7D181F09498C002B9025 /* AppDelegate.swift */; };
 		709C7D1B1F09498C002B9025 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709C7D1A1F09498C002B9025 /* ViewController.swift */; };
 		709C7D1E1F09498C002B9025 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 709C7D1C1F09498C002B9025 /* Main.storyboard */; };
@@ -24,13 +26,13 @@
 		E2A14D13240C72F600CEEBC8 /* prague video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = E2A14D0F240C72F400CEEBC8 /* prague video.mp4 */; };
 		E2A14D14240C72F600CEEBC8 /* homer video.mov in Resources */ = {isa = PBXBuildFile; fileRef = E2A14D10240C72F500CEEBC8 /* homer video.mov */; };
 		E2A14D15240C72F600CEEBC8 /* fight club video.mov in Resources */ = {isa = PBXBuildFile; fileRef = E2A14D11240C72F600CEEBC8 /* fight club video.mov */; };
-		FF3F3430DED88E41F258E6CA /* libPods-AR-Portal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 69E0723B2665B98FC891D2C5 /* libPods-AR-Portal.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		002BECA92430D51B0032BCB7 /* search.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = search.wav; sourceTree = "<group>"; };
 		06391F3F1F0A2FA2000CBEAA /* ReplayKitRecording.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplayKitRecording.swift; sourceTree = "<group>"; };
+		08FA007EAE7FBDD767547840 /* libPods-AR-Portal.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AR-Portal.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2783196200382E09800F80AF /* Pods-AR-Portal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AR-Portal.release.xcconfig"; path = "Target Support Files/Pods-AR-Portal/Pods-AR-Portal.release.xcconfig"; sourceTree = "<group>"; };
-		69E0723B2665B98FC891D2C5 /* libPods-AR-Portal.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AR-Portal.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		709C7D151F09498C002B9025 /* AR-Portal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AR-Portal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		709C7D181F09498C002B9025 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		709C7D1A1F09498C002B9025 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -57,13 +59,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF3F3430DED88E41F258E6CA /* libPods-AR-Portal.a in Frameworks */,
+				67BB6D948A13D699680B343E /* libPods-AR-Portal.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		002BECA82430D5070032BCB7 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				002BECA92430D51B0032BCB7 /* search.wav */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
 		709C7D0C1F09498C002B9025 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +95,7 @@
 		709C7D171F09498C002B9025 /* AR-Portal */ = {
 			isa = PBXGroup;
 			children = (
+				002BECA82430D5070032BCB7 /* Sounds */,
 				E2A14D18240C741500CEEBC8 /* art.scnassets */,
 				E2A14D05240C6C6300CEEBC8 /* ImageTracking */,
 				709C7D181F09498C002B9025 /* AppDelegate.swift */,
@@ -104,7 +115,7 @@
 		868D2534BF23EF1BBFAB20DD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				69E0723B2665B98FC891D2C5 /* libPods-AR-Portal.a */,
+				08FA007EAE7FBDD767547840 /* libPods-AR-Portal.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -199,6 +210,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				002BECAA2430D51B0032BCB7 /* search.wav in Resources */,
 				E2A14D13240C72F600CEEBC8 /* prague video.mp4 in Resources */,
 				E2A14D14240C72F600CEEBC8 /* homer video.mov in Resources */,
 				E2A14D12240C72F600CEEBC8 /* isa video.mp4 in Resources */,

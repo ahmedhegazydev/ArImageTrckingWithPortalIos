@@ -10,11 +10,13 @@ import UIKit
 import SceneKit
 import ARKit
 import HGRippleRadarView
-
+import AVFoundation
+import SwiftySound
 
 @available(iOS 12.0, *)
 class ImgTrackingViewController: UIViewController, ARSCNViewDelegate {
     
+    @IBOutlet weak var lblState: UILabel!
     @IBOutlet weak var radarView: RadarView!
     @IBOutlet var imageViewSearch: UIImageView!
     @IBOutlet var sceneView: ARSCNView!
@@ -183,6 +185,7 @@ class ImgTrackingViewController: UIViewController, ARSCNViewDelegate {
         //self.imageViewSearch.isHidden = true;
         self.radarView.isHidden = true;
         self.magicSwitch.isOn = false;
+        lblState.text = "Start searching.."
         
     }
     
@@ -215,12 +218,15 @@ class ImgTrackingViewController: UIViewController, ARSCNViewDelegate {
         if sender.isOn {
 //            self.imageViewSearch.isHidden = false
             self.radarView.isHidden = false;
+            lblState.text = "Stop searching"
+            Sound.play(file: "search.wav")
 
             session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
         }else{
 //            self.imageViewSearch.isHidden = true;
             self.radarView.isHidden = true;
-
+            lblState.text = "Start searching..."
+            Sound.stopAll()
             session.pause()
             
         }

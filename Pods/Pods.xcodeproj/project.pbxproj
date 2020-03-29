@@ -7,68 +7,93 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		019126C1685F67B9B03900CE82DFF6F9 /* RippleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E775074B2A5C32A490AA7E3AC01C0C0 /* RippleView.swift */; };
-		22625F4F23FCB5BA68803E901F9624BA /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9756D03FCD2D6AF430E48044F288789B /* ItemView.swift */; };
-		28174114684AF1F4B73825462831D23F /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98276D1E264AF10401446E27BA01BEF7 /* Animation.swift */; };
-		68CCF88DB6BA29A39F5BBF189A374B3D /* HGRippleRadarView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 39AFC845D40990D2F7A47B11AE2DBFE4 /* HGRippleRadarView-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		93AEC4DC31CC1E39C1B7BF2A30DC5B2D /* HGRippleRadarView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B6593BB65078B4C7C4FF40894F39CB73 /* HGRippleRadarView-dummy.m */; };
-		985AE7A140CC05C6072E149421F0D0B9 /* Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D789A14206E63999466F572AD08F6C /* Geometry.swift */; };
-		99E6EC9721F292995DAE3414CC8913FB /* RadarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA55B7CAC37DB69FA1DCD4F13D326AD7 /* RadarView.swift */; };
-		A3D63FB2CE15E000199D531B4ACDB7DD /* RadarViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543FB40F3022EB3FC85925B7AB5AA235 /* RadarViewProtocol.swift */; };
-		A6489196AB4CB2D1C75C7CBB6C9A3A3C /* Pods-AR-Portal-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFB1982A607D10975278E52F061E251 /* Pods-AR-Portal-dummy.m */; };
-		ABC05B56CF3394722D9A173B44E8EA5E /* Pods-AR-Portal-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 90DBD64E47268C6043E17AB23708CD11 /* Pods-AR-Portal-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		C356088A5B2B53552DE76708A333F3C5 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6645F5F291DAB0C9C4B52F583B5206 /* UIColor.swift */; };
-		CF497AF1129136B36917B62220961906 /* Drawer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D32472D929CB87C802CE9708835779 /* Drawer.swift */; };
-		E05E89B7558C0E42E622402254D6CE5A /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FC2BCADE20812557360B54C1C5713B /* Item.swift */; };
+		019126C1685F67B9B03900CE82DFF6F9 /* RippleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484EE865A57AA22B41AB7687CC8CD6FE /* RippleView.swift */; };
+		22625F4F23FCB5BA68803E901F9624BA /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FBC96431089751673F185A0116A6EA0 /* ItemView.swift */; };
+		28174114684AF1F4B73825462831D23F /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B89343725E1D44A145EFBDE2ED28E29 /* Animation.swift */; };
+		47D57E889306590B5172449CA3DE8CB0 /* Pods-AR-Portal-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 90DBD64E47268C6043E17AB23708CD11 /* Pods-AR-Portal-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		68CCF88DB6BA29A39F5BBF189A374B3D /* HGRippleRadarView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 30CCC91E57F7B0A0632D9E9EDC3769AA /* HGRippleRadarView-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		86E62A9A6EC39719041023A19E293444 /* Pods-AR-Portal-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFB1982A607D10975278E52F061E251 /* Pods-AR-Portal-dummy.m */; };
+		8ADF81A90C7710CDEDD3E2F3640D8E39 /* SwiftySound-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FAACC6713794BF97F282E65C0B8B134 /* SwiftySound-dummy.m */; };
+		93AEC4DC31CC1E39C1B7BF2A30DC5B2D /* HGRippleRadarView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 20EB456EA068A51FAF15F7ADCEDFC0A3 /* HGRippleRadarView-dummy.m */; };
+		985AE7A140CC05C6072E149421F0D0B9 /* Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88CAF7B8BCE6BF365F0AE775DB15BF7 /* Geometry.swift */; };
+		99E6EC9721F292995DAE3414CC8913FB /* RadarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D13A3496FB2E83AF2E315C43B572DC /* RadarView.swift */; };
+		A3D63FB2CE15E000199D531B4ACDB7DD /* RadarViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCBA663D88FDDD48D5850F46CCEEC77 /* RadarViewProtocol.swift */; };
+		C356088A5B2B53552DE76708A333F3C5 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9027E311C743E0C9EE0A4897FA1E2B /* UIColor.swift */; };
+		CF497AF1129136B36917B62220961906 /* Drawer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138766A97350049DAAEFABD5F84640BB /* Drawer.swift */; };
+		D1F99897E64ED817B925CE772D1AF595 /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89937E23E763ED12A5C5CEB90C87D65 /* Sound.swift */; };
+		E05E89B7558C0E42E622402254D6CE5A /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF5BD745DAEC4691244291C98A4802D /* Item.swift */; };
+		EC67C9BF172187642FF1C68A3E8DF4DA /* SwiftySound-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F079DB78025BCE90B1C0F5A36BC4D730 /* SwiftySound-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		E6040AB520A3AAEDABD67D8D8B0A0726 /* PBXContainerItemProxy */ = {
+		AB34F4990FE913DC50B12EF41E06CCEE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = AD3A46F6BA83BC350FBC948C7F8D498F;
 			remoteInfo = HGRippleRadarView;
 		};
+		ADCCC6C128AA4863E2DF87937F3ED87D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF76419D4650F093FFACB1AD713C1EF1;
+			remoteInfo = SwiftySound;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00D32472D929CB87C802CE9708835779 /* Drawer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Drawer.swift; path = HGRippleRadarView/Classes/Utilities/Drawer.swift; sourceTree = "<group>"; };
-		0C3092FCCB3DBE7E7118A7B6193A5236 /* HGRippleRadarView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HGRippleRadarView-prefix.pch"; sourceTree = "<group>"; };
-		0E775074B2A5C32A490AA7E3AC01C0C0 /* RippleView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RippleView.swift; path = HGRippleRadarView/Classes/RippleView.swift; sourceTree = "<group>"; };
+		0FAACC6713794BF97F282E65C0B8B134 /* SwiftySound-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftySound-dummy.m"; sourceTree = "<group>"; };
+		138766A97350049DAAEFABD5F84640BB /* Drawer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Drawer.swift; path = HGRippleRadarView/Classes/Utilities/Drawer.swift; sourceTree = "<group>"; };
+		20EB456EA068A51FAF15F7ADCEDFC0A3 /* HGRippleRadarView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HGRippleRadarView-dummy.m"; sourceTree = "<group>"; };
+		21D13A3496FB2E83AF2E315C43B572DC /* RadarView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RadarView.swift; path = HGRippleRadarView/Classes/RadarView.swift; sourceTree = "<group>"; };
+		30CCC91E57F7B0A0632D9E9EDC3769AA /* HGRippleRadarView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HGRippleRadarView-umbrella.h"; sourceTree = "<group>"; };
 		339B08F09EE5547644DBB93F10C377DA /* Pods-AR-Portal.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-AR-Portal.modulemap"; sourceTree = "<group>"; };
-		39AFC845D40990D2F7A47B11AE2DBFE4 /* HGRippleRadarView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HGRippleRadarView-umbrella.h"; sourceTree = "<group>"; };
-		543FB40F3022EB3FC85925B7AB5AA235 /* RadarViewProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RadarViewProtocol.swift; path = HGRippleRadarView/Classes/RadarViewProtocol.swift; sourceTree = "<group>"; };
+		3B9027E311C743E0C9EE0A4897FA1E2B /* UIColor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIColor.swift; path = HGRippleRadarView/Classes/Utilities/UIColor.swift; sourceTree = "<group>"; };
+		484EE865A57AA22B41AB7687CC8CD6FE /* RippleView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RippleView.swift; path = HGRippleRadarView/Classes/RippleView.swift; sourceTree = "<group>"; };
+		4CF5BD745DAEC4691244291C98A4802D /* Item.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Item.swift; path = HGRippleRadarView/Classes/Item.swift; sourceTree = "<group>"; };
 		5484FC66289EB6A9651D48BAC0358C61 /* Pods-AR-Portal-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AR-Portal-acknowledgements.plist"; sourceTree = "<group>"; };
-		5EFC05A8AEF06592529E0AD9EF69908E /* HGRippleRadarView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HGRippleRadarView.release.xcconfig; sourceTree = "<group>"; };
+		5FBC96431089751673F185A0116A6EA0 /* ItemView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ItemView.swift; path = HGRippleRadarView/Classes/ItemView.swift; sourceTree = "<group>"; };
+		648B0CAC0595601A50030CF92EE961A0 /* HGRippleRadarView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HGRippleRadarView.debug.xcconfig; sourceTree = "<group>"; };
+		6C3EBF35936D0EA12C741B8A987DA4B9 /* HGRippleRadarView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HGRippleRadarView.release.xcconfig; sourceTree = "<group>"; };
+		7B89343725E1D44A145EFBDE2ED28E29 /* Animation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Animation.swift; path = HGRippleRadarView/Classes/Utilities/Animation.swift; sourceTree = "<group>"; };
+		81039390C85F229250B725577278F576 /* SwiftySound.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftySound.release.xcconfig; sourceTree = "<group>"; };
+		8277C2073F7A28837BF59685062F8B6B /* SwiftySound.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftySound.debug.xcconfig; sourceTree = "<group>"; };
 		8588FC5EFDC4D10A66F4C4C6818017BB /* libHGRippleRadarView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libHGRippleRadarView.a; path = libHGRippleRadarView.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		90DBD64E47268C6043E17AB23708CD11 /* Pods-AR-Portal-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AR-Portal-umbrella.h"; sourceTree = "<group>"; };
-		9756D03FCD2D6AF430E48044F288789B /* ItemView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ItemView.swift; path = HGRippleRadarView/Classes/ItemView.swift; sourceTree = "<group>"; };
-		98276D1E264AF10401446E27BA01BEF7 /* Animation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Animation.swift; path = HGRippleRadarView/Classes/Utilities/Animation.swift; sourceTree = "<group>"; };
+		996615DEDCD6C2933EC3F8504427765B /* libSwiftySound.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libSwiftySound.a; path = libSwiftySound.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		AD6645F5F291DAB0C9C4B52F583B5206 /* UIColor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIColor.swift; path = HGRippleRadarView/Classes/Utilities/UIColor.swift; sourceTree = "<group>"; };
-		B6593BB65078B4C7C4FF40894F39CB73 /* HGRippleRadarView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HGRippleRadarView-dummy.m"; sourceTree = "<group>"; };
+		A88CAF7B8BCE6BF365F0AE775DB15BF7 /* Geometry.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Geometry.swift; path = HGRippleRadarView/Classes/Utilities/Geometry.swift; sourceTree = "<group>"; };
+		AABCB58682A2EC644A3B1C03F2E80FB5 /* SwiftySound.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftySound.modulemap; sourceTree = "<group>"; };
 		BA43A3A12B258D8CD81103A860BB1FBF /* Pods-AR-Portal-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AR-Portal-acknowledgements.markdown"; sourceTree = "<group>"; };
-		BA55B7CAC37DB69FA1DCD4F13D326AD7 /* RadarView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RadarView.swift; path = HGRippleRadarView/Classes/RadarView.swift; sourceTree = "<group>"; };
-		BE26B9A0B35A1E0BC06ECE2B904A40F9 /* HGRippleRadarView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = HGRippleRadarView.modulemap; sourceTree = "<group>"; };
 		C44F92B2167D1DC108FB5B703D20ABF9 /* libPods-AR-Portal.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-AR-Portal.a"; path = "libPods-AR-Portal.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C5D789A14206E63999466F572AD08F6C /* Geometry.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Geometry.swift; path = HGRippleRadarView/Classes/Utilities/Geometry.swift; sourceTree = "<group>"; };
+		C49D089ED54B543F7C5D7B8980FA8C42 /* HGRippleRadarView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = HGRippleRadarView.modulemap; sourceTree = "<group>"; };
+		C602E09AC151D9D157B46C9E0FB7A57A /* HGRippleRadarView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HGRippleRadarView-prefix.pch"; sourceTree = "<group>"; };
 		CFB55AEF31CEA72AB50C3AA8DAC6C49B /* Pods-AR-Portal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AR-Portal.release.xcconfig"; sourceTree = "<group>"; };
-		D520AD4703778316F341CADB661EEFD7 /* HGRippleRadarView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HGRippleRadarView.debug.xcconfig; sourceTree = "<group>"; };
-		D6FC2BCADE20812557360B54C1C5713B /* Item.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Item.swift; path = HGRippleRadarView/Classes/Item.swift; sourceTree = "<group>"; };
+		EBDDB7A811733547A9C7EA2A6449B1E7 /* SwiftySound-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftySound-prefix.pch"; sourceTree = "<group>"; };
+		F079DB78025BCE90B1C0F5A36BC4D730 /* SwiftySound-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftySound-umbrella.h"; sourceTree = "<group>"; };
 		F3F7C6AAC17AF11B442C1BA5C298CE5F /* Pods-AR-Portal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AR-Portal.debug.xcconfig"; sourceTree = "<group>"; };
+		F89937E23E763ED12A5C5CEB90C87D65 /* Sound.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Sound.swift; path = Sources/Sound.swift; sourceTree = "<group>"; };
 		FAFB1982A607D10975278E52F061E251 /* Pods-AR-Portal-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AR-Portal-dummy.m"; sourceTree = "<group>"; };
+		FBCBA663D88FDDD48D5850F46CCEEC77 /* RadarViewProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RadarViewProtocol.swift; path = HGRippleRadarView/Classes/RadarViewProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1220F61EA949B631CE6D4A5C6DE1BD73 /* Frameworks */ = {
+		241400878557FCE56349932B4F67822A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		241400878557FCE56349932B4F67822A /* Frameworks */ = {
+		7C3C0B0F912A3EF5CB662D78575D6716 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ABC8D4A36DFF632AE846FF5C6280CA53 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -78,11 +103,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4B3167123B8950104BD18F7E5EEAB4DD /* Products */ = {
+		016DC6FAA0A2C3E27DD0C871D922C468 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C49D089ED54B543F7C5D7B8980FA8C42 /* HGRippleRadarView.modulemap */,
+				20EB456EA068A51FAF15F7ADCEDFC0A3 /* HGRippleRadarView-dummy.m */,
+				C602E09AC151D9D157B46C9E0FB7A57A /* HGRippleRadarView-prefix.pch */,
+				30CCC91E57F7B0A0632D9E9EDC3769AA /* HGRippleRadarView-umbrella.h */,
+				648B0CAC0595601A50030CF92EE961A0 /* HGRippleRadarView.debug.xcconfig */,
+				6C3EBF35936D0EA12C741B8A987DA4B9 /* HGRippleRadarView.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/HGRippleRadarView";
+			sourceTree = "<group>";
+		};
+		4B47ABE92733739F38E13BB9C7F9C396 /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				8588FC5EFDC4D10A66F4C4C6818017BB /* libHGRippleRadarView.a */,
 				C44F92B2167D1DC108FB5B703D20ABF9 /* libPods-AR-Portal.a */,
+				996615DEDCD6C2933EC3F8504427765B /* libSwiftySound.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -102,19 +142,43 @@
 			path = "Target Support Files/Pods-AR-Portal";
 			sourceTree = "<group>";
 		};
-		4FBD0E5FE2D5CB8231A0322F61E87B3C /* HGRippleRadarView */ = {
+		86035D8CFF4E19D404B23A4EAB487DBE /* SwiftySound */ = {
 			isa = PBXGroup;
 			children = (
-				98276D1E264AF10401446E27BA01BEF7 /* Animation.swift */,
-				00D32472D929CB87C802CE9708835779 /* Drawer.swift */,
-				C5D789A14206E63999466F572AD08F6C /* Geometry.swift */,
-				D6FC2BCADE20812557360B54C1C5713B /* Item.swift */,
-				9756D03FCD2D6AF430E48044F288789B /* ItemView.swift */,
-				BA55B7CAC37DB69FA1DCD4F13D326AD7 /* RadarView.swift */,
-				543FB40F3022EB3FC85925B7AB5AA235 /* RadarViewProtocol.swift */,
-				0E775074B2A5C32A490AA7E3AC01C0C0 /* RippleView.swift */,
-				AD6645F5F291DAB0C9C4B52F583B5206 /* UIColor.swift */,
-				E11E3231F8337AA4F53E656B7C17B0D7 /* Support Files */,
+				F89937E23E763ED12A5C5CEB90C87D65 /* Sound.swift */,
+				9304D1B49BB2471DEAD4291FE61CEE1F /* Support Files */,
+			);
+			name = SwiftySound;
+			path = SwiftySound;
+			sourceTree = "<group>";
+		};
+		9304D1B49BB2471DEAD4291FE61CEE1F /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				AABCB58682A2EC644A3B1C03F2E80FB5 /* SwiftySound.modulemap */,
+				0FAACC6713794BF97F282E65C0B8B134 /* SwiftySound-dummy.m */,
+				EBDDB7A811733547A9C7EA2A6449B1E7 /* SwiftySound-prefix.pch */,
+				F079DB78025BCE90B1C0F5A36BC4D730 /* SwiftySound-umbrella.h */,
+				8277C2073F7A28837BF59685062F8B6B /* SwiftySound.debug.xcconfig */,
+				81039390C85F229250B725577278F576 /* SwiftySound.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftySound";
+			sourceTree = "<group>";
+		};
+		B12319037E03CFCE3C444FD40D0DB881 /* HGRippleRadarView */ = {
+			isa = PBXGroup;
+			children = (
+				7B89343725E1D44A145EFBDE2ED28E29 /* Animation.swift */,
+				138766A97350049DAAEFABD5F84640BB /* Drawer.swift */,
+				A88CAF7B8BCE6BF365F0AE775DB15BF7 /* Geometry.swift */,
+				4CF5BD745DAEC4691244291C98A4802D /* Item.swift */,
+				5FBC96431089751673F185A0116A6EA0 /* ItemView.swift */,
+				21D13A3496FB2E83AF2E315C43B572DC /* RadarView.swift */,
+				FBCBA663D88FDDD48D5850F46CCEEC77 /* RadarViewProtocol.swift */,
+				484EE865A57AA22B41AB7687CC8CD6FE /* RippleView.swift */,
+				3B9027E311C743E0C9EE0A4897FA1E2B /* UIColor.swift */,
+				016DC6FAA0A2C3E27DD0C871D922C468 /* Support Files */,
 			);
 			name = HGRippleRadarView;
 			path = HGRippleRadarView;
@@ -125,8 +189,8 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
-				DD4E565CED83F06C73DFB986CAE8DE76 /* Pods */,
-				4B3167123B8950104BD18F7E5EEAB4DD /* Products */,
+				EB81159C2D9D67D870AD5A27A2BA529D /* Pods */,
+				4B47ABE92733739F38E13BB9C7F9C396 /* Products */,
 				EB6AAAF800B5C3D8C497276DCCCE59DF /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -138,28 +202,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		DD4E565CED83F06C73DFB986CAE8DE76 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				4FBD0E5FE2D5CB8231A0322F61E87B3C /* HGRippleRadarView */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		E11E3231F8337AA4F53E656B7C17B0D7 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				BE26B9A0B35A1E0BC06ECE2B904A40F9 /* HGRippleRadarView.modulemap */,
-				B6593BB65078B4C7C4FF40894F39CB73 /* HGRippleRadarView-dummy.m */,
-				0C3092FCCB3DBE7E7118A7B6193A5236 /* HGRippleRadarView-prefix.pch */,
-				39AFC845D40990D2F7A47B11AE2DBFE4 /* HGRippleRadarView-umbrella.h */,
-				D520AD4703778316F341CADB661EEFD7 /* HGRippleRadarView.debug.xcconfig */,
-				5EFC05A8AEF06592529E0AD9EF69908E /* HGRippleRadarView.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/HGRippleRadarView";
-			sourceTree = "<group>";
-		};
 		EB6AAAF800B5C3D8C497276DCCCE59DF /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -168,14 +210,23 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
+		EB81159C2D9D67D870AD5A27A2BA529D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B12319037E03CFCE3C444FD40D0DB881 /* HGRippleRadarView */,
+				86035D8CFF4E19D404B23A4EAB487DBE /* SwiftySound */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		0EF894DCF04D401018E7CD3C5B0518AF /* Headers */ = {
+		9B64DDAE9FC80DB4AC0C0E3791F81DF1 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ABC05B56CF3394722D9A173B44E8EA5E /* Pods-AR-Portal-umbrella.h in Headers */,
+				EC67C9BF172187642FF1C68A3E8DF4DA /* SwiftySound-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,21 +238,30 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F40A5000F7878E45A21FD6C21E0C0858 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47D57E889306590B5172449CA3DE8CB0 /* Pods-AR-Portal-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		4B10BF6B32BCB843437599BD49A2281F /* Pods-AR-Portal */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 64B4D5D400EBA5465E33252D0BA7979C /* Build configuration list for PBXNativeTarget "Pods-AR-Portal" */;
+			buildConfigurationList = E624627CC7FCDA746D1F66FA919A068B /* Build configuration list for PBXNativeTarget "Pods-AR-Portal" */;
 			buildPhases = (
-				0EF894DCF04D401018E7CD3C5B0518AF /* Headers */,
-				1FD881887572D72C3C10BAC400A2E118 /* Sources */,
-				1220F61EA949B631CE6D4A5C6DE1BD73 /* Frameworks */,
+				F40A5000F7878E45A21FD6C21E0C0858 /* Headers */,
+				E4007678D1C8919CE5534AEAAEED6012 /* Sources */,
+				ABC8D4A36DFF632AE846FF5C6280CA53 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				8C62FB88F63114A811715D734E231B85 /* PBXTargetDependency */,
+				10BF474D4DBA8537A5B467CCC76B1CAA /* PBXTargetDependency */,
+				A4E2F996739862C894B1289BA9928CC4 /* PBXTargetDependency */,
 			);
 			name = "Pods-AR-Portal";
 			productName = "Pods-AR-Portal";
@@ -226,6 +286,24 @@
 			productReference = 8588FC5EFDC4D10A66F4C4C6818017BB /* libHGRippleRadarView.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		AF76419D4650F093FFACB1AD713C1EF1 /* SwiftySound */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2AF924DD6942BE4322B8D02115820C4B /* Build configuration list for PBXNativeTarget "SwiftySound" */;
+			buildPhases = (
+				9B64DDAE9FC80DB4AC0C0E3791F81DF1 /* Headers */,
+				72B6A7502902B3EA2F22C9EABB5A8C4B /* Sources */,
+				7C3C0B0F912A3EF5CB662D78575D6716 /* Frameworks */,
+				A73B9967D2D38190C05EAFFFE40487BD /* Copy generated compatibility header */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftySound;
+			productName = SwiftySound;
+			productReference = 996615DEDCD6C2933EC3F8504427765B /* libSwiftySound.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -244,17 +322,42 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 4B3167123B8950104BD18F7E5EEAB4DD /* Products */;
+			productRefGroup = 4B47ABE92733739F38E13BB9C7F9C396 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				AD3A46F6BA83BC350FBC948C7F8D498F /* HGRippleRadarView */,
 				4B10BF6B32BCB843437599BD49A2281F /* Pods-AR-Portal */,
+				AF76419D4650F093FFACB1AD713C1EF1 /* SwiftySound */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		A73B9967D2D38190C05EAFFFE40487BD /* Copy generated compatibility header */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h",
+				"${PODS_ROOT}/Headers/Public/SwiftySound/SwiftySound.modulemap",
+				"${PODS_ROOT}/Headers/Public/SwiftySound/SwiftySound-umbrella.h",
+			);
+			name = "Copy generated compatibility header";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap",
+				"${BUILT_PRODUCTS_DIR}/SwiftySound-umbrella.h",
+				"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "COMPATIBILITY_HEADER_PATH=\"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h\"\nMODULE_MAP_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap\"\n\nditto \"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h\" \"${COMPATIBILITY_HEADER_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/SwiftySound/SwiftySound.modulemap\" \"${MODULE_MAP_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/SwiftySound/SwiftySound-umbrella.h\" \"${BUILT_PRODUCTS_DIR}\"\nprintf \"\\n\\nmodule ${PRODUCT_MODULE_NAME}.Swift {\\n  header \\\"${COMPATIBILITY_HEADER_PATH}\\\"\\n  requires objc\\n}\\n\" >> \"${MODULE_MAP_PATH}\"\n";
+		};
 		ABCF7A017D330E21506F4AD912F5AF09 /* Copy generated compatibility header */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -282,11 +385,20 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1FD881887572D72C3C10BAC400A2E118 /* Sources */ = {
+		72B6A7502902B3EA2F22C9EABB5A8C4B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A6489196AB4CB2D1C75C7CBB6C9A3A3C /* Pods-AR-Portal-dummy.m in Sources */,
+				D1F99897E64ED817B925CE772D1AF595 /* Sound.swift in Sources */,
+				8ADF81A90C7710CDEDD3E2F3640D8E39 /* SwiftySound-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E4007678D1C8919CE5534AEAAEED6012 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86E62A9A6EC39719041023A19E293444 /* Pods-AR-Portal-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,18 +422,24 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		8C62FB88F63114A811715D734E231B85 /* PBXTargetDependency */ = {
+		10BF474D4DBA8537A5B467CCC76B1CAA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = HGRippleRadarView;
 			target = AD3A46F6BA83BC350FBC948C7F8D498F /* HGRippleRadarView */;
-			targetProxy = E6040AB520A3AAEDABD67D8D8B0A0726 /* PBXContainerItemProxy */;
+			targetProxy = AB34F4990FE913DC50B12EF41E06CCEE /* PBXContainerItemProxy */;
+		};
+		A4E2F996739862C894B1289BA9928CC4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftySound;
+			target = AF76419D4650F093FFACB1AD713C1EF1 /* SwiftySound */;
+			targetProxy = ADCCC6C128AA4863E2DF87937F3ED87D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		06BCAE2C75ED5BF953FD4597F92E1DC7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5EFC05A8AEF06592529E0AD9EF69908E /* HGRippleRadarView.release.xcconfig */;
+			baseConfigurationReference = 6C3EBF35936D0EA12C741B8A987DA4B9 /* HGRippleRadarView.release.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -406,9 +524,35 @@
 			};
 			name = Release;
 		};
+		4191CEC33F09228726C8AEF4FDB21819 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8277C2073F7A28837BF59685062F8B6B /* SwiftySound.debug.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftySound/SwiftySound-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MODULEMAP_FILE = Headers/Public/SwiftySound/SwiftySound.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = SwiftySound;
+				PRODUCT_NAME = SwiftySound;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
 		462E08D38711665F900E74291EE52F4C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D520AD4703778316F341CADB661EEFD7 /* HGRippleRadarView.debug.xcconfig */;
+			baseConfigurationReference = 648B0CAC0595601A50030CF92EE961A0 /* HGRippleRadarView.debug.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -432,7 +576,7 @@
 			};
 			name = Debug;
 		};
-		61E4F605049D03A796AD8BBED35DD53D /* Debug */ = {
+		99EC57757B5E4ED9524C4271DB975F16 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F3F7C6AAC17AF11B442C1BA5C298CE5F /* Pods-AR-Portal.debug.xcconfig */;
 			buildSettings = {
@@ -456,26 +600,28 @@
 			};
 			name = Debug;
 		};
-		A312F1419ED0AF6F626FE1CDB6D89AE7 /* Release */ = {
+		AC11D3821860446C6C30E0E21E8F39CA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CFB55AEF31CEA72AB50C3AA8DAC6C49B /* Pods-AR-Portal.release.xcconfig */;
+			baseConfigurationReference = 81039390C85F229250B725577278F576 /* SwiftySound.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-AR-Portal/Pods-AR-Portal.modulemap";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftySound/SwiftySound-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MODULEMAP_FILE = Headers/Public/SwiftySound/SwiftySound.modulemap;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = SwiftySound;
+				PRODUCT_NAME = SwiftySound;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.1;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -545,9 +691,43 @@
 			};
 			name = Debug;
 		};
+		FFE85105695654E1223F8E27AA6D9364 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CFB55AEF31CEA72AB50C3AA8DAC6C49B /* Pods-AR-Portal.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-AR-Portal/Pods-AR-Portal.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2AF924DD6942BE4322B8D02115820C4B /* Build configuration list for PBXNativeTarget "SwiftySound" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4191CEC33F09228726C8AEF4FDB21819 /* Debug */,
+				AC11D3821860446C6C30E0E21E8F39CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -557,20 +737,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		64B4D5D400EBA5465E33252D0BA7979C /* Build configuration list for PBXNativeTarget "Pods-AR-Portal" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				61E4F605049D03A796AD8BBED35DD53D /* Debug */,
-				A312F1419ED0AF6F626FE1CDB6D89AE7 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		E21EFA42CECBC03F370745CD36660DD6 /* Build configuration list for PBXNativeTarget "HGRippleRadarView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				462E08D38711665F900E74291EE52F4C /* Debug */,
 				06BCAE2C75ED5BF953FD4597F92E1DC7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E624627CC7FCDA746D1F66FA919A068B /* Build configuration list for PBXNativeTarget "Pods-AR-Portal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				99EC57757B5E4ED9524C4271DB975F16 /* Debug */,
+				FFE85105695654E1223F8E27AA6D9364 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
