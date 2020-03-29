@@ -24,10 +24,13 @@
 		E2A14D13240C72F600CEEBC8 /* prague video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = E2A14D0F240C72F400CEEBC8 /* prague video.mp4 */; };
 		E2A14D14240C72F600CEEBC8 /* homer video.mov in Resources */ = {isa = PBXBuildFile; fileRef = E2A14D10240C72F500CEEBC8 /* homer video.mov */; };
 		E2A14D15240C72F600CEEBC8 /* fight club video.mov in Resources */ = {isa = PBXBuildFile; fileRef = E2A14D11240C72F600CEEBC8 /* fight club video.mov */; };
+		FF3F3430DED88E41F258E6CA /* libPods-AR-Portal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 69E0723B2665B98FC891D2C5 /* libPods-AR-Portal.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		06391F3F1F0A2FA2000CBEAA /* ReplayKitRecording.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplayKitRecording.swift; sourceTree = "<group>"; };
+		2783196200382E09800F80AF /* Pods-AR-Portal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AR-Portal.release.xcconfig"; path = "Target Support Files/Pods-AR-Portal/Pods-AR-Portal.release.xcconfig"; sourceTree = "<group>"; };
+		69E0723B2665B98FC891D2C5 /* libPods-AR-Portal.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AR-Portal.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		709C7D151F09498C002B9025 /* AR-Portal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AR-Portal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		709C7D181F09498C002B9025 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		709C7D1A1F09498C002B9025 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -46,6 +49,7 @@
 		E2A14D0F240C72F400CEEBC8 /* prague video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "prague video.mp4"; sourceTree = "<group>"; };
 		E2A14D10240C72F500CEEBC8 /* homer video.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "homer video.mov"; sourceTree = "<group>"; };
 		E2A14D11240C72F600CEEBC8 /* fight club video.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "fight club video.mov"; sourceTree = "<group>"; };
+		E5BAF18DAEAE403AA9C10A76 /* Pods-AR-Portal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AR-Portal.debug.xcconfig"; path = "Target Support Files/Pods-AR-Portal/Pods-AR-Portal.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF3F3430DED88E41F258E6CA /* libPods-AR-Portal.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +69,8 @@
 			children = (
 				709C7D171F09498C002B9025 /* AR-Portal */,
 				709C7D161F09498C002B9025 /* Products */,
+				F6811041C72A3AAAF878DF8C /* Pods */,
+				868D2534BF23EF1BBFAB20DD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,6 +101,14 @@
 			path = "AR-Portal";
 			sourceTree = "<group>";
 		};
+		868D2534BF23EF1BBFAB20DD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				69E0723B2665B98FC891D2C5 /* libPods-AR-Portal.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E2A14D05240C6C6300CEEBC8 /* ImageTracking */ = {
 			isa = PBXGroup;
 			children = (
@@ -116,6 +131,15 @@
 			path = art.scnassets;
 			sourceTree = "<group>";
 		};
+		F6811041C72A3AAAF878DF8C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E5BAF18DAEAE403AA9C10A76 /* Pods-AR-Portal.debug.xcconfig */,
+				2783196200382E09800F80AF /* Pods-AR-Portal.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -123,6 +147,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 709C7D271F09498D002B9025 /* Build configuration list for PBXNativeTarget "AR-Portal" */;
 			buildPhases = (
+				D96E2FA79EA46C753BD2A87F /* [CP] Check Pods Manifest.lock */,
 				709C7D111F09498C002B9025 /* Sources */,
 				709C7D121F09498C002B9025 /* Frameworks */,
 				709C7D131F09498C002B9025 /* Resources */,
@@ -187,6 +212,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D96E2FA79EA46C753BD2A87F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AR-Portal-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		709C7D111F09498C002B9025 /* Sources */ = {
@@ -331,6 +381,7 @@
 		};
 		709C7D281F09498D002B9025 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E5BAF18DAEAE403AA9C10A76 /* Pods-AR-Portal.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 44L25H9H28;
@@ -345,6 +396,7 @@
 		};
 		709C7D291F09498D002B9025 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2783196200382E09800F80AF /* Pods-AR-Portal.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 44L25H9H28;

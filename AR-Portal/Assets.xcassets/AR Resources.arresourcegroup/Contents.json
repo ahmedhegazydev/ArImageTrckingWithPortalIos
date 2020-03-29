@@ -6,6 +6,9 @@
   "resources" : [
     {
       "filename" : "hegazy1.arreferenceimage"
+    },
+    {
+      "filename" : "marker.arreferenceimage"
     }
   ]
 }

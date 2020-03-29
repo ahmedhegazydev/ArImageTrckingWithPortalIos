@@ -117,7 +117,7 @@
                                     <action selector="switchOnMagic:" destination="HEl-GK-NpA" eventType="valueChanged" id="Rzd-Ce-2Sq"/>
                                 </connections>
                             </switch>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Magic" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lva-d3-Jva">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Searching Marker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lva-d3-Jva">
                                 <rect key="frame" x="180.5" y="781" width="53" height="21"/>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -140,16 +140,36 @@
                                     <segue destination="pBh-ie-0iV" kind="embed" id="5mF-gt-7mG"/>
                                 </connections>
                             </containerView>
-                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search" translatesAutoresizingMaskIntoConstraints="NO" id="fPz-H6-G3R">
-                                <rect key="frame" x="87" y="315.5" width="240" height="265"/>
+                            <view hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hDP-JQ-AIP" customClass="RadarView" customModule="HGRippleRadarView">
+                                <rect key="frame" x="20" y="44" width="374" height="852"/>
+                                <subviews>
+                                    <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search" translatesAutoresizingMaskIntoConstraints="NO" id="fPz-H6-G3R">
+                                        <rect key="frame" x="162" y="401" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="UcR-Bk-xz3"/>
+                                            <constraint firstAttribute="width" constant="50" id="paf-t6-358"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="265" id="Kia-AL-4Dx"/>
+                                    <constraint firstItem="fPz-H6-G3R" firstAttribute="centerY" secondItem="hDP-JQ-AIP" secondAttribute="centerY" id="74H-Cg-Y6B"/>
+                                    <constraint firstItem="fPz-H6-G3R" firstAttribute="centerX" secondItem="hDP-JQ-AIP" secondAttribute="centerX" id="qla-zd-7SY"/>
                                 </constraints>
-                            </imageView>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="numberOfWaves">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="paddingBetweenItems">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="numberOfCircles">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="fPz-H6-G3R" firstAttribute="centerX" secondItem="Lva-d3-Jva" secondAttribute="centerX" id="0cb-cd-rdT"/>
                             <constraint firstItem="jq2-Ao-kvj" firstAttribute="centerX" secondItem="A9A-7O-t6F" secondAttribute="centerX" id="7To-j1-27x"/>
                             <constraint firstItem="Scy-eT-5Em" firstAttribute="leading" secondItem="8KM-H4-jdR" secondAttribute="leading" id="7np-Pa-qSh"/>
                             <constraint firstItem="8KM-H4-jdR" firstAttribute="trailing" secondItem="Scy-eT-5Em" secondAttribute="trailing" id="DI8-Wm-sXM"/>
@@ -157,15 +177,17 @@
                             <constraint firstItem="A9A-7O-t6F" firstAttribute="leading" secondItem="8KM-H4-jdR" secondAttribute="leading" id="P97-xJ-wTD"/>
                             <constraint firstItem="6cO-4D-7jq" firstAttribute="top" secondItem="XPS-RH-TXz" secondAttribute="top" id="X8R-Yj-BS4"/>
                             <constraint firstItem="8KM-H4-jdR" firstAttribute="bottom" secondItem="jq2-Ao-kvj" secondAttribute="bottom" constant="20" id="dnv-gz-RfS"/>
+                            <constraint firstItem="hDP-JQ-AIP" firstAttribute="leading" secondItem="8KM-H4-jdR" secondAttribute="leading" id="gre-Z8-SiI"/>
                             <constraint firstItem="Scy-eT-5Em" firstAttribute="top" secondItem="8KM-H4-jdR" secondAttribute="top" id="hKu-zd-AH2"/>
                             <constraint firstItem="Lva-d3-Jva" firstAttribute="centerX" secondItem="A9A-7O-t6F" secondAttribute="centerX" id="jGE-G0-aEW"/>
-                            <constraint firstItem="fPz-H6-G3R" firstAttribute="leading" secondItem="8KM-H4-jdR" secondAttribute="leading" constant="87" id="jGg-Ql-Lr4"/>
                             <constraint firstItem="8KM-H4-jdR" firstAttribute="trailing" secondItem="A9A-7O-t6F" secondAttribute="trailing" id="je3-zm-4ly"/>
                             <constraint firstItem="8KM-H4-jdR" firstAttribute="bottom" secondItem="Lva-d3-Jva" secondAttribute="bottom" constant="60" id="k6l-jz-2Ol"/>
-                            <constraint firstItem="fPz-H6-G3R" firstAttribute="centerY" secondItem="6cO-4D-7jq" secondAttribute="centerY" id="kiE-O4-HGd"/>
                             <constraint firstAttribute="trailing" secondItem="6cO-4D-7jq" secondAttribute="trailing" id="lDd-mU-fZ3"/>
                             <constraint firstAttribute="bottom" secondItem="A9A-7O-t6F" secondAttribute="bottom" id="phi-m2-oBk"/>
+                            <constraint firstItem="hDP-JQ-AIP" firstAttribute="top" secondItem="8KM-H4-jdR" secondAttribute="top" id="pvO-mQ-YQs"/>
+                            <constraint firstItem="8KM-H4-jdR" firstAttribute="trailing" secondItem="hDP-JQ-AIP" secondAttribute="trailing" id="s2h-4N-iFf"/>
                             <constraint firstAttribute="bottom" secondItem="6cO-4D-7jq" secondAttribute="bottom" id="yuQ-bd-CrJ"/>
+                            <constraint firstAttribute="bottom" secondItem="hDP-JQ-AIP" secondAttribute="bottom" id="z4y-m9-hwM"/>
                             <constraint firstItem="6cO-4D-7jq" firstAttribute="leading" secondItem="XPS-RH-TXz" secondAttribute="leading" id="zKh-qq-twL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8KM-H4-jdR"/>
@@ -174,6 +196,7 @@
                         <outlet property="blurView" destination="6cO-4D-7jq" id="Lry-zb-iJg"/>
                         <outlet property="imageViewSearch" destination="fPz-H6-G3R" id="2mH-Vz-4WN"/>
                         <outlet property="magicSwitch" destination="jq2-Ao-kvj" id="C5Q-1Q-MHN"/>
+                        <outlet property="radarView" destination="hDP-JQ-AIP" id="ck1-CS-eRv"/>
                         <outlet property="sceneView" destination="A9A-7O-t6F" id="AWR-9s-WJh"/>
                     </connections>
                 </viewController>

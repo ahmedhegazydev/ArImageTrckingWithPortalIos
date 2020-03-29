@@ -1,0 +1,6 @@
+module Pods_AR_Portal {
+  umbrella header "Pods-AR-Portal-umbrella.h"
+
+  export *
+  module * { export * }
+}

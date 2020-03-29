@@ -1,0 +1,1 @@
+../../../Target Support Files/HGRippleRadarView/HGRippleRadarView-umbrella.h

@@ -9,14 +9,25 @@
 import UIKit
 import SceneKit
 import ARKit
+import HGRippleRadarView
+
 
 @available(iOS 12.0, *)
 class ImgTrackingViewController: UIViewController, ARSCNViewDelegate {
     
+    @IBOutlet weak var radarView: RadarView!
     @IBOutlet var imageViewSearch: UIImageView!
     @IBOutlet var sceneView: ARSCNView!
     @IBOutlet weak var magicSwitch: UISwitch!
     @IBOutlet weak var blurView: UIVisualEffectView!
+    
+    var timer: Timer?
+    var index = 0
+    var items = [Item]()
+    
+//    var radarView: RadarView? {
+//        return view as? RadarView
+//    }
     
     // Create video player
     let isaVideoPlayer: AVPlayer = {
@@ -108,6 +119,9 @@ class ImgTrackingViewController: UIViewController, ARSCNViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+//        radarView?.delegate = self
+//        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(addItem), userInfo: nil, repeats: true)
+        
         
         self.disableViews()
         
@@ -123,6 +137,35 @@ class ImgTrackingViewController: UIViewController, ARSCNViewDelegate {
         }
     }
     
+    
+    @objc func addItem() {
+            if index > 3 {
+                addMultipleItems()
+                timer?.invalidate()
+                return
+            }
+            let item = Item(uniqueKey: "item\(index)", value:"item\(index)")
+            items.append(item)
+            radarView?.add(item: item)
+            index += 1
+        }
+        
+        func addMultipleItems() {
+            var tempItems = [Item]()
+            for _ in 0 ..< 3 {
+                let item = Item(uniqueKey: "item\(index)", value:"item\(index)")
+                tempItems.append(item)
+                index += 1
+            }
+            items.append(contentsOf: tempItems)
+            radarView?.add(items: tempItems)
+    //        Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(removeFirstItem), userInfo: nil, repeats: false)
+        }
+        
+        @objc func removeFirstItem() {
+            radarView?.remove(item: items.first!)
+        }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
@@ -137,8 +180,10 @@ class ImgTrackingViewController: UIViewController, ARSCNViewDelegate {
     }
     
     func disableViews(){
-        self.imageViewSearch.isHidden = true;
+        //self.imageViewSearch.isHidden = true;
+        self.radarView.isHidden = true;
         self.magicSwitch.isOn = false;
+        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -168,10 +213,14 @@ class ImgTrackingViewController: UIViewController, ARSCNViewDelegate {
         
         
         if sender.isOn {
-            self.imageViewSearch.isHidden = false
+//            self.imageViewSearch.isHidden = false
+            self.radarView.isHidden = false;
+
             session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
         }else{
-            self.imageViewSearch.isHidden = true;
+//            self.imageViewSearch.isHidden = true;
+            self.radarView.isHidden = true;
+
             session.pause()
             
         }
@@ -197,8 +246,10 @@ class ImgTrackingViewController: UIViewController, ARSCNViewDelegate {
             // Create a plane
             let plane = SCNPlane(width: imageAnchor.referenceImage.physicalSize.width, height: imageAnchor.referenceImage.physicalSize.height)
             //            if imageAnchor.referenceImage.name == "prague image" {
-            if imageAnchor.referenceImage.name == "hegazy1"{
-                debugPrint("hegzo")
+//            if imageAnchor.referenceImage.name == "hegazy1"{
+            if imageAnchor.referenceImage.name == "marker"{
+                debugPrint("marker")
+            
                 // Set AVPlayer as the plane's texture and play
                 //plane.firstMaterial?.diffuse.contents = self.pragueVideoPlayer
                 //self.pragueVideoPlayer.play()
@@ -264,4 +315,15 @@ class ImgTrackingViewController: UIViewController, ARSCNViewDelegate {
         
     }
     
+}
+
+@available(iOS 12.0, *)
+extension ImgTrackingViewController: RadarViewDelegate {
+    func radarView(radarView: RadarView, didSelect item: Item) {
+        print(item.uniqueKey)
+    }
+    
+    func radarView(radarView: RadarView, didDeselect item: Item) {}
+    
+    func radarView(radarView: RadarView, didDeselectAllItems lastSelectedItem: Item) {}
 }
